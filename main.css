@@ -1,13 +1,81 @@
 body {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     margin: 0;
+}
+
+    h1 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-family: monospace;
+    z-index:1;
+    margin-left: 100px;
+    position: absolute;
+    top: 5%;
+}
+h2 {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-family: monospace;
+    z-index:1;
+    margin-left: 100px;
+    position: absolute;
+    top: 10%;
+    }
+.interfaccia {
+    position: absolute;
+    right: 23%;
+    top: 25%;
+    bottom: 0;
+    padding: 15px;
+    width: 200px;
+    height: 500px;
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    
+
+}
+.interfaccia input {
+    width:  100%;
+}
+
+.interfaccia input[type="range"] {
+    height: 1px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.interfaccia select {
+    width: 100%;
+    display: block;
+    -webkit-appearance: none;
+    background: white;
+    border-color: white;
+    color: black;
+    font-family: monospace;
+    font-size: 10px;
+    padding: 3px;
+    border-radius: 0px;
+    background-image: url(assets/arrow.png);
+    background-size: 4%;
+    background-repeat: no-repeat;
+    background-position-x: 180px;
+    background-position-y: 6px;
+}
+
+.interfaccia label {
+    margin-top: 1em;
+    display: block;
+    line-height: 21px;
 }
 .contenitore {
     position: absolute;
-    background-color: rgb(240,240,240);
+    background-color: rgb(255, 255, 255);
     width: 400px;
     height: 400px;
-    left: 50%; /* posizionamento da sinistra */
+    left: 50%;
     top: 50%;
     margin-left: -200px;
     margin-top: -200px;
@@ -15,39 +83,113 @@ body {
 .layer img {                
     width:100%;
     height:100%;
-}                   
-.faccia {
-    background-color: red;
-    width:100%;
-    height:100%;
-} 
+}  
+.corpo {                
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}                 
+.barba {
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
 .naso {                
-    background-color: green;
-    width:50%;
-    height:50%;
-    left: 25%;
-    top: 20%;
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 .bocca {                
-    background-color: orange;
-    width: 60%;
-    height: 25%;
-    left: 20%;
-    top: 65%;
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
-.occhio {
-    background-color: aquamarine;
-    width: 20%;
-    height: 20%;
-    top: 30%;
-}
-.occhio-dx {
-    right: 20%;
-}
-.occhio-sx {
-    left: 20%;
-}            
+.occhi {
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}   
+.capelli {
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}         
+.vestiti {
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+} 
+.accessori {
+    border: 1px solid;
+    width: 400px;
+    height: 400px;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}   
 .layer {
     position:absolute;
     background-color: transparent;
 }
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: absolute;
+    left: 38.6%;
+    top: 78%;
+
+  }
+  
+  .button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid black;
+  }
+  
+  .button:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+  }
+
+  #index {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: absolute;
+    top: 2%;
+    left: 5.6%;
+    background-color: white; 
+    color: black; 
+    border: 2px solid black;
+  }
+
+  #index:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+  }

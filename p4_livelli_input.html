@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prova 4</title>
+        <link rel="stylesheet" href="main.css">
+    
+    </head>
+    <body>
+		<h1> 
+			PixelArt
+		</h1>
+		<h2>
+			Avatar_Generator
+		</h2>
+
+		<button class="button" id="randomizer">RANDOMIZER</button>
+		
+		<button class="button" id="index">INDEX</button>
+       
+		<div class="contenitore">
+            <div class="layer barba">
+                <img src="assets/barba_0.png" alt="">
+            </div>
+			<div class="layer corpo">
+                <img src="assets/corpo_0.png" alt="">
+            </div>
+            <div class="layer bocca">
+                <img src="assets/bocca_0.png" alt="">
+            </div>
+            <div class="layer naso">
+                <img src="assets/naso_0.png" alt="">
+            </div>
+            <div class="layer occhi">
+                <img src="assets/occhi_0.png" alt="">
+            </div>  
+			<div class="layer capelli">
+                <img src="assets/capelli_0.png" alt="">
+            </div>  
+			<div class="layer vestiti">
+                <img src="assets/vestiti_0.png" alt="">
+            </div>  
+			<div class="layer accessori">
+                <img src="assets/accessori_0.png" alt="">
+            </div>  
+                                     
+        </div>
+
+        <div class="interfaccia">
+
+        	<label for="#input-barba" style="padding-bottom:5px ;">barba</label>
+			<input id="input-barba" type="range" step="1" value="0" min="0" max="4" >
+
+			<label for="#input-corpo">corpo</label>
+			<select id="input-corpo">
+				<option value="0" >triangolo</option>
+				<option value="1">ovale</option>
+				<option value="2">rotondo</option>
+			</select>
+
+			<label for="#input-naso">naso</label>
+			<select id="input-naso">
+				<option value="0" >elle</option>
+				<option value="1">aquila</option>
+				<option value="2">patata</option>
+				<option value="3">fine</option>
+			</select>
+
+			
+			<label for="#input-bocca">bocca</label>
+			<select id="input-bocca">
+				<option value="0" >seria</option>
+				<option value="1">fine</option>
+				<option value="2">rossetto</option>
+				<option value="3">sorridente</option>
+				<option value="4">perplessa</option>
+				<option value="5">stupita</option>
+			</select>
+
+			<label for="#input-occhi">occhi</label>
+			<select id="input-occhi">
+				<option value="0" >distratti</option>
+				<option value="1">diretti</option>
+				<option value="2">snob</option>
+				<option value="3">occhiolino</option>
+				<option value="4">occhiali</option>
+				<option value="5">spaccone</option>
+			</select>
+
+			<label for="#input-capelli">capelli</label>
+			<select id="input-capelli">
+				<option value="0" >caschetto</option>
+				<option value="1">lunghi</option>
+				<option value="2">raccolti</option>
+				<option value="3">caschetto con frangia</option>
+				<option value="4">corti con frangia</option>
+				<option value="5">corti</option>
+				<option value="6">corti con gel</option>
+				<option value="7">corti pettinati</option>
+				<option value="8">pelato</option>
+			</select>
+
+			<label for="#input-vestiti">vestiti</label>
+			<select id="input-vestiti">
+				<option value="0" >canotta</option>
+				<option value="1">colletto a V</option>
+				<option value="2">maglietta con monogramma</option>
+				<option value="3">scollata</option>
+				<option value="4">vestito</option>
+				<option value="5">felpa con cappuccio</option>
+			</select>
+
+			<label for="#input-accessori">accessori</label>
+			<select id="input-accessori">
+				<option value="0" >collana</option>
+				<option value="1">collana in perle</option>
+				<option value="2">orecchini</option>
+				<option value="3">orecchini lunghi</option>
+				<option value="4">nessuno</option>
+			</select>
+		
+		
+			
+
+        </div>
+
+        <script>
+
+        	document.querySelector("#input-barba").addEventListener("input", function(e){
+        		const v = e.target.value
+	            const immagine_faccia = document.querySelector(".barba img")
+	            immagine_faccia.src = "assets/barba_" + v + ".png"
+        	})
+
+			document.querySelector("#input-corpo").addEventListener("change", function(e){
+        		const v = e.target.value
+        		document.querySelector(".corpo img").src = "assets/corpo_" + v + ".png"
+        	})
+
+        	document.querySelector("#input-naso").addEventListener("change", function(e){
+        		const v = e.target.value
+        		document.querySelector(".naso img").src = "assets/naso_" + v + ".png"
+        	})
+
+        	document.querySelector("#input-bocca").addEventListener("input", function(e) {
+        		const v = e.target.value
+        		document.querySelector(".bocca img").src = "assets/bocca_" + v + ".png"
+        	})
+
+			document.querySelector("#input-occhi").addEventListener("input", function(e) {
+        		const v = e.target.value
+        		document.querySelector(".occhi img").src = "assets/occhi_" + v + ".png"
+        	})
+
+			document.querySelector("#input-capelli").addEventListener("input", function(e) {
+        		const v = e.target.value
+        		document.querySelector(".capelli img").src = "assets/capelli_" + v + ".png"
+        	})
+			document.querySelector("#input-vestiti").addEventListener("input", function(e) {
+        		const v = e.target.value
+        		document.querySelector(".vestiti img").src = "assets/vestiti_" + v + ".png"
+			})
+			document.querySelector("#input-accessori").addEventListener("input", function(e) {
+        		const v = e.target.value
+        		document.querySelector(".accessori img").src = "assets/accessori_" + v + ".png"
+			})
+
+			
+			
+			document.querySelector("#randomizer").addEventListener('click', function(e) {
+			
+			const numero_barba = Math.floor( Math.random() * 5 )
+            const immagine_barba = document.querySelector(".barba img")
+            immagine_barba.src = "assets/barba_" + numero_barba + ".png"
+
+			const numero_corpo = Math.floor( Math.random() * 3 )
+            const immagine_corpo = document.querySelector(".corpo img")
+            immagine_corpo.src = "assets/corpo_" + numero_corpo + ".png"
+
+			const numero_naso = Math.floor( Math.random() * 4 )
+            const immagine_naso = document.querySelector(".naso img")
+            immagine_naso.src = "assets/naso_" + numero_naso + ".png"
+
+            const numero_bocca = Math.floor( Math.random() * 6 )
+            const immagine_bocca = document.querySelector(".bocca img")
+            immagine_bocca.src = "assets/bocca_" + numero_bocca + ".png"
+
+            const numero_occhi = Math.floor( Math.random() * 6 )
+            const immagine_occhi = document.querySelector(".occhi img")
+            immagine_occhi.src = "assets/occhi_" + numero_occhi + ".png"
+
+			const numero_capelli = Math.floor( Math.random() * 8 )
+            const immagine_capelli = document.querySelector(".capelli img")
+            immagine_capelli.src = "assets/capelli_" + numero_capelli + ".png"
+
+            const numero_vestiti = Math.floor( Math.random() * 6 )
+            const immagine_vestiti = document.querySelector(".vestiti img")
+            immagine_vestiti.src = "assets/vestiti_" + numero_vestiti + ".png"
+
+			const numero_accessori = Math.floor( Math.random() * 4 )
+            const immagine_accessori = document.querySelector(".accessori img")
+            immagine_accessori.src = "assets/accessori_" + numero_accessori + ".png"
+			
+		})
+			
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
